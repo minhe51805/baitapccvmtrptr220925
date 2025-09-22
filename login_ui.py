@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
-
+##Co y tao conflict ne hihi
 class LoginUI:
     def __init__(self):
         self.window = tk.Tk()
@@ -97,7 +97,7 @@ class LoginUI:
         # Nút đăng nhập
         login_button = tk.Button(
             button_frame,
-            text="btnlogin",
+            text="Đăng Nhập",
             font=('Arial', 10, 'bold'),
             bg='#4CAF50',
             fg='white',

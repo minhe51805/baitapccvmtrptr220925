@@ -71,10 +71,10 @@ class LoginUI:
         self.username_entry.grid(row=1, column=0, pady=(0, 15))
         self.username_entry.focus()  # Focus vào ô username khi khởi động
         
-         # Mật khẩu
+             # Mật khẩu
         password_label = tk.Label(
             login_frame, 
-            text="mật khẩu:", 
+            text="Mật khẩu:", 
             font=('Arial', 10),
             bg='#f0f0f0'
         )
@@ -90,6 +90,26 @@ class LoginUI:
         )
         self.password_entry.grid(row=3, column=0, pady=(0, 20))
         
+        
+        # Frame cho buttons
+        button_frame = tk.Frame(login_frame, bg='#f0f0f0')
+        button_frame.grid(row=5, column=0)
+        
+        # Nút đăng nhập
+        login_button = tk.Button(
+            button_frame,
+            text="Đăng Nhập",
+            font=('Arial', 10, 'bold'),
+            bg='#4CAF50',
+            fg='white',
+            width=12,
+            height=1,
+            relief='flat',
+            cursor='hand2',
+        )
+        login_button.pack(side='left', padx=(0, 10))
+      
+       
 
         # Bind Enter key để đăng nhập
         self.window.bind('<Return>', lambda event: self.login())

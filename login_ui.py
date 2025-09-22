@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
-##Co y tao conflict ne hihi
+##config
 class LoginUI:
     def __init__(self):
         self.window = tk.Tk()

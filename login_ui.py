@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
-
+##config
 class LoginUI:
     def __init__(self):
         self.window = tk.Tk()
@@ -17,7 +17,7 @@ class LoginUI:
         
         # Dữ liệu đăng nhập mẫu (trong thực tế nên lưu trong database)
         self.users = {
-            "admin": "123456",
+            "admin": "admin",
             "user": "password",
             "test": "test123"
         }
@@ -71,26 +71,7 @@ class LoginUI:
         self.username_entry.grid(row=1, column=0, pady=(0, 15))
         self.username_entry.focus()  # Focus vào ô username khi khởi động
         
-         # Mật khẩu
-        password_label = tk.Label(
-            login_frame, 
-            text="Mật khẩu:", 
-            font=('Arial', 10),
-            bg='#f0f0f0'
-        )
-        password_label.grid(row=2, column=0, sticky='w', pady=(0, 5))
         
-        self.password_entry = tk.Entry(
-            login_frame, 
-            font=('Arial', 10),
-            width=25,
-            show='*',  # Ẩn mật khẩu
-            relief='solid',
-            borderwidth=1
-        )
-        self.password_entry.grid(row=3, column=0, pady=(0, 20))
-        
-
         # Bind Enter key để đăng nhập
         self.window.bind('<Return>', lambda event: self.login())
     
@@ -119,7 +100,7 @@ class LoginUI:
         
         # Kiểm tra tài khoản
         if username in self.users and self.users[username] == password:
-            messagebox.showinfo("Thành công", f"Đăng nhập thành công!\nXin chào {username}!")
+            messagebox.showinfo("Thành công", f"Đăng nhập thành công!")
             self.show_main_app(username)
         else:
             messagebox.showerror("Lỗi", "Tên đăng nhập hoặc mật khẩu không đúng!")

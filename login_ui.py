@@ -17,7 +17,7 @@ class LoginUI:
         
         # Dữ liệu đăng nhập mẫu (trong thực tế nên lưu trong database)
         self.users = {
-            "admin": "123456",
+            "admin": "admin",
             "user": "password",
             "test": "test123"
         }
@@ -138,7 +138,7 @@ class LoginUI:
         
         # Kiểm tra tài khoản
         if username in self.users and self.users[username] == password:
-            messagebox.showinfo("Thành công", f"Đăng nhập thành công!\nXin chào {username}!")
+            messagebox.showinfo("Thành công", f"Đăng nhập thành công!")
             self.show_main_app(username)
         else:
             messagebox.showerror("Lỗi", "Tên đăng nhập hoặc mật khẩu không đúng!")

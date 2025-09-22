@@ -71,6 +71,7 @@ class LoginUI:
         self.username_entry.grid(row=1, column=0, pady=(0, 15))
         self.username_entry.focus()  # Focus vào ô username khi khởi động
         
+<<<<<<< HEAD
          # Mật khẩu
         password_label = tk.Label(
             login_frame, 
@@ -110,6 +111,9 @@ class LoginUI:
         login_button.pack(side='left', padx=(0, 10))
         
 
+=======
+        
+>>>>>>> parent of 406f352 (Add Mat Khau And txtmatkhau)
         # Bind Enter key để đăng nhập
         self.window.bind('<Return>', lambda event: self.login())
     
